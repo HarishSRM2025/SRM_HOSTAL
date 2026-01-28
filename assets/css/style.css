@@ -18,7 +18,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+a{
+    text-decoration:none!important;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-dark);
@@ -491,7 +493,6 @@ body {
         }
 
         .recruitment-swiper-section {
-            margin-bottom: 50px;
             position: relative;
         }
 
@@ -679,7 +680,7 @@ body {
 
 .why-srm-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -1147,4 +1148,7 @@ body {
   .footer-container {
     grid-template-columns: 1fr;
   }
+}
+.text-blue{
+    color:var(--primary-blue);
 }

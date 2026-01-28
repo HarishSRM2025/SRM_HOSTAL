@@ -38,7 +38,7 @@
             },
 
             gateway: {
-                title: "Gateway To Great Careers",
+                title: "Welcome to Our Career & Placement Centre",
                 description: [
                     "Your future begins here. Our Placement Cell is dedicated to guiding students from classrooms to careers, connecting talent with opportunities, and shaping leaders for tomorrow. With strong industry partnerships and personalized training, we ensure every student is prepared to step confidently into the professional world."
                 ],
@@ -77,15 +77,10 @@
             whyChooseSRM: {
                 title: "Why Choose SRM?",
                 reasons: [
-                    { icon: "fa-check-circle", text: "Co-educational team for Engineering, Management, Science & Humanities, Medical Sciences, Law and Agricultural Sciences", column: 1 },
-                    { icon: "fa-check-circle", text: "Hub for High-Paying Recruiters", column: 1 },
-                    { icon: "fa-check-circle", text: "Major recruiters from Fortune 500 list", column: 1 },
-                    { icon: "fa-check-circle", text: "Highest number of Core Companies", column: 1 },
-                    { icon: "fa-check-circle", text: "Specialised Training programs", column: 1 },
-                    { icon: "fa-check-circle", text: "Well-Appreciated Industry Immersion Programmes", column: 2 },
-                    { icon: "fa-check-circle", text: "Active IDEA (MOOCs and 50 Centres of Excellence Inside campus)", column: 2 },
-                    { icon: "fa-check-circle", text: "Never-Ending Making Clubs to the Categories Ahead", column: 2 },
-                    { icon: "fa-check-circle", text: "150000+ Hours of Professional Skills", column: 2 }
+                    { icon: "fa-check-circle", text: "Centralized placement team with dedicated coordinators", column: 1 },
+                    { icon: "fa-check-circle", text: "Strong alumni network across Fortune 500 companies", column: 1 },
+                    { icon: "fa-check-circle", text: "Proven track record of successful placements", column: 1 },
+                    { icon: "fa-check-circle", text: "Personalized mentoring and career guidance", column: 1 }
                 ]
             },
 
@@ -229,6 +224,8 @@
             });
 
             html += `</div><div class="stats-grid">`;
+            
+            
 
             data.stats.forEach(stat => {
                 html += `
