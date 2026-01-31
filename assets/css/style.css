@@ -643,7 +643,11 @@ body {
         color: var(--text-light);
         line-height: 1.8;
     }
-
+    @media screen and (max-width:768px) {
+        .reach-us-info{
+            padding: 10px;
+        }
+    }
     /* Journey Section */
     .journey {
         padding: 80px 20px;
