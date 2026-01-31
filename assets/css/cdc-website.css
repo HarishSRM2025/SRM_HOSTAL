@@ -342,7 +342,7 @@ body {
 
     .vision-mission {
         grid-template-columns: 1fr;
-        margin: 5% 5%;
+        margin: 5%  auto;
     }
 
     .welcome-content {
@@ -715,8 +715,11 @@ body {
             .cdc-event-card {
                 flex-direction: column;
                 height: auto;
+                max-width: 320px;
             }
-
+            .cdc-events-list{
+                align-items: center;
+            }
             .cdc-event-image-wrapper {
                 width: 100%;
                 height: 220px;
