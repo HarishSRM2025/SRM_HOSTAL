@@ -11,8 +11,8 @@
 /* Main Image */
 .carousel-main {
     position: relative;
-    height:430px;
-    width:520px;
+    max-height:max-content;
+    max-width:520px;
     margin:auto;
     border-radius: 14px;
     overflow: hidden;
@@ -73,7 +73,6 @@
 
 .thumb {
     width: 100px;
-    height: 80px;
     object-fit: cover;
     border-radius: 10px;
     opacity: 0.6;
@@ -89,6 +88,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .carousel-main { height: 260px; }
-    .thumb { width: 120px; height: 80px; }
+    .carousel-main { height: max-content; }
+    .carousel-thumbs{
+        gap: 2%;
+    }
+    .thumb { width: 18%; height: max-content; }
 }

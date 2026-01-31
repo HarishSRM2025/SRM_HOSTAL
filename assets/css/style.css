@@ -93,6 +93,7 @@ body {
     .job-offer {
         flex-direction: column;
         gap: 5px;
+        align-items: center;
     }
 
     .job-offer strong {
@@ -789,9 +790,6 @@ body {
             gap: 10px;
         }
 
-        .stats-card {
-            padding: 30px 15px;
-        }
 
         .stats-icon {
             font-size: 36px;
@@ -875,7 +873,7 @@ body {
 
     .placement-team-grid {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 40px;
         max-width: 1200px;
         margin: 0 auto;
@@ -963,6 +961,17 @@ body {
         }
     }
     
+    .contact-team-grid{
+        display: flex;
+        align-items: center;
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .contact-team-grid .placement-card{
+        width: 300px;
+    }
+
 .recruitment-swiper-container {
     position: relative;
     width: 100%;
@@ -1075,7 +1084,36 @@ body {
     .placement-stats  .stats-card:nth-child(1){
         border:none;
     }
-
+    @media screen and (max-width:768px) {
+        .placement-stats .stats-grid{
+            grid-template-columns: 1fr;
+            border: none;
+        }
+        .placement-stats  .stats-card:nth-child(1){
+            border:1px solid #000;
+        }
+        .placement-stats  .stats-card{
+            border: 1px solid #000;
+        }
+        .placement-stats  .stats-card:nth-child(odd){
+            border-bottom: none;
+        }
+        .placement-stats  .stats-card:nth-child(2){
+            border-bottom: none;
+        }
+        .stats-grid{
+            grid-template-columns: 1fr;
+        }
+        .stats-card{
+            grid-template-columns: 0.5fr 1.5fr;
+        }
+        .stats-label{
+            font-size: 24PX;
+        }
+        .stats-icon i{
+            font-size: 35px;
+        }
+    }
 
     /* Activities Content */
     .activities-team {
@@ -1085,7 +1123,7 @@ body {
 
     .activities-team-grid {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 40px;
         max-width: 1200px;
         margin: 0 auto;
@@ -1148,7 +1186,7 @@ body {
 
     .collab-team-grid {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap:30px;
         max-width:1200px;
         margin: 0 auto;
