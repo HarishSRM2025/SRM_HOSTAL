@@ -77,8 +77,8 @@ body {
     background-color: var(--accent-gold);
 }
 
-.about-list {
-    list-style: none;
+.about-list{
+    list-style: none !important;
     margin-bottom: 30px;
 }
 
@@ -90,11 +90,11 @@ body {
 }
 
 .about-list li::before {
-    content: '●';
+    content: '✔';
     position: absolute;
     left: 0;
     color: var(--text-dark);
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 }
 
 .highlight-box {

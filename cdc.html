@@ -11,35 +11,8 @@
     <link rel="stylesheet" href="./assets/css/breadcrum.css">
 </head>
 <body>
-     <!-- Top Banner -->
-    <div class="top-banner" id="topBanner"></div>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <img id="siteLogo" class="logo" src="" alt="SRM Logo">
-            </div>
-            <div class="nav-menu" id="navMenu"></div>
-            <div class="nav-buttons" id="navButtons"></div>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <div class="nav-brand" style="margin: 10px;">
-                <img  class="logo" src="./assets/images/srm-1920w.webp" alt="SRM Logo">
-            </div>
-            <div class="mobile-menu-close" id="mobileMenuClose">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-        <div class="mobile-menu-content" id="mobileMenuContent"></div>
-    </div>
+    <div id="myData"></div>
+    
 
     <!-- Hero Section -->
     <section class="breadcrum-hero" >
@@ -85,31 +58,12 @@
                     <div class="sidebar-box">
                         <h3>Career Development Centre</h3>
                         <ul class="sidebar-menu">
-                            <li><a href="#"><span class="icon"><i class="fa-solid fa-house"></i></span> Board of Studies</a></li>
-                            <li><a href="#"><span class="icon"><i class="fa-solid fa-book"></i></span> Research</a></li>
+                            <li><a href="board_studies.html"><span class="icon"><i class="fa-solid fa-house"></i></span> Board of Studies</a></li>
                             <li><a href="#"><span class="icon"><i class="fa-solid fa-user"></i></span> CDC Empower</a></li>
-                            <li><a href="#"><span class="icon"><i class="fa-solid fa-user-group"></i></span> Alumni Connect</a></li>
+                            <li><a href="alumini_connect.html"><span class="icon"><i class="fa-solid fa-user-group"></i></span> Alumni Connect</a></li>
                         </ul>
                     </div>
                 </aside>
-            </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="2007">0</div>
-                    <div class="stat-label">Established</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="47">0</div>
-                    <div class="stat-label">Faculty & Staff</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="120">0</div>
-                    <div class="stat-label">Publications</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="21">0</div>
-                    <div class="stat-label">PhD awarded</div>
-                </div>
             </div>
 
         </section>
@@ -142,8 +96,7 @@
             <div class="welcome-content">
                 <div class="welcome-image">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Ccircle cx='90' cy='90' r='85' fill='%23fff' stroke='%23fff' stroke-width='5'/%3E%3Ccircle cx='90' cy='70' r='30' fill='%23003b7a'/%3E%3Cpath d='M90 105 Q65 115 50 145 L130 145 Q115 115 90 105' fill='%23003b7a'/%3E%3C/svg%3E" alt="Dr. P. Madhusoodhanan">
-                    <h4>Dr.P.Madhusoodhanan</h4>
-                    <p class="designation">Associate Professor and Head<br>head.cdc.ktr.et@srmist.edu.in</p>
+                    <h4>Training Head</h4>
                 </div>
                 <div class="welcome-text">
                     <h2>Welcome Message</h2>
@@ -152,14 +105,7 @@
             </div>
         </section>
 
-        <!-- Faculty Section -->
-        <section class="faculty-section">
-            <h2>Faculty</h2>
-            <div class="faculty-button">
-                <a href="#" class="btn-primary">Faculty Members ➜</a>
-            </div>
-        </section>
-
+     
         <div class="cdc-news-events-section">
             <h2 class="cdc-section-title">News & Events</h2>
         
@@ -433,6 +379,7 @@
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/Navbar.js"></script>
+    <script src="./assets/js/footer.js"></script>
     <script src="./assets/js/cdc-website.js"></script>
 
 </body>

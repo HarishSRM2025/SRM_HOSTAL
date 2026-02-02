@@ -1,27 +1,27 @@
 const new_activities = document.getElementById('new_activities');
 const activity_content=[
     {
-        title:"Title-1",
+        title:"CDC Training",
         paragraph:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur at minima sed quidem corporis."
     },
     {
-        title:"Title-2",
+        title:"CCC Training",
         paragraph:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur at minima sed quidem corporis."
     },
     {
-        title:"Title-3",
+        title:"Face Prep",
         paragraph:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur at minima sed quidem corporis."
     },
     {
-        title:"Title-4",
+        title:"CCC Training",
         paragraph:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur at minima sed quidem corporis."
     },
     {
-        title:"Title-5",
+        title:"CCC Training",
         paragraph:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur at minima sed quidem corporis."
     },
     {
-        title:"Title-6",
+        title:"CCC Training",
         paragraph:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur at minima sed quidem corporis."
     }
 ]

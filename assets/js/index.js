@@ -52,12 +52,12 @@
             },
 
             directorMessage: {
-                title: "Director's Message",
+                title: "Dean's Message",
                 director: {
-                    name: "Dr. N. Venkata Sastry",
-                    position: "Director, Career Centre",
-                    image: "./assets/images/director.jpg",
-                    phone: "T: +91-44 -27455774 (D) / 27452270 Extn: 7301"
+                    name: "T. Madhavan",
+                    position: "Dean Placement,SRM IST ",
+                    image: "./assets/images/teams/1.jpeg",
+                    phone: "<a href='tel:9842916830' style='color:white!important'>9842916830</a> / <a href='tel:8489903631' style='color:white!important'>8489903631</a>"
                 },
                 message: [
                     "At our institution, we believe placements are not just about jobs — they are about building careers. Our focus is on nurturing skills, confidence, and professionalism so that students excel in competitive environments. Together with faculty, alumni, and recruiters, we create a supportive ecosystem for success."
