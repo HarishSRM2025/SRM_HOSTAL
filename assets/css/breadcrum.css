@@ -13,7 +13,10 @@
     align-items: center;
     overflow: hidden;
 }
-
+.grayShade{
+    background:var(--light-blue);
+    padding:3% 5%;
+}
 .breadcrum-hero::before {
     content: '';
     position: absolute;
@@ -41,12 +44,17 @@
 }
 
 .breadcrum-hero h1 {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     color: var(--white);
     font-weight: 300;
     letter-spacing: 2px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width:768px){
+    .breadcrum-hero h1 {
+        font-size: 1.5rem;
+    }
 }
 
 .breadcrumb {

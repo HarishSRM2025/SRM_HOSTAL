@@ -1,3 +1,43 @@
+    let myData =document.getElementById("myData");
+    myData.innerHTML=`
+                    <div class="top-banner" id="topBanner"></div>                
+                    <!-- Navbar -->
+                    <nav class="navbar">
+                        <div class="nav-container">
+                            <div class="nav-brand">
+                                <img id="siteLogo" class="logo" src="" alt="SRM Logo">
+                            </div>
+                            <div class="nav-menu" id="navMenu"></div>
+                            <div class="nav-buttons" id="navButtons"></div>
+                            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu" id="mobileMenu">
+                        <div class="mobile-menu-header">
+                            <div class="nav-brand" style="margin: 10px;">
+                                <img  class="logo" src="./assets/images/srm-1920w.webp" alt="SRM Logo">
+                            </div>
+                            <div class="mobile-menu-close" id="mobileMenuClose">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-content" id="mobileMenuContent"></div>
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu" id="mobileMenu">
+                        <div class="mobile-menu-header">
+                            <h3>Menu</h3>
+                            <div class="mobile-menu-close" id="mobileMenuClose">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-content" id="mobileMenuContent"></div>
+                    </div>`;
     const websiteNavData = {
             siteConfig: {
                 title: "SRM Career Centre - Global Skills for Global Placements",
@@ -28,7 +68,7 @@
                     { label: "Research", url: "#", hasDropdown: false },
                     { label: "Campus Life", url: "#", hasDropdown: false },
                     { label: "News & Events", url: "#", hasDropdown: false },
-                    { label: "Placement", url: "#", hasDropdown: false },
+                    { label: "Placement", url: "index.html", hasDropdown: false },
                     { label: "Apply Now", url: "#", hasDropdown: false }
                 ],
                 rightButtons: [
