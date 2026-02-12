@@ -40,7 +40,6 @@
                     </div>`;
     const websiteNavData = {
             siteConfig: {
-                title: "SRM Career Centre - Global Skills for Global Placements",
                 description: "SRM Institute of Science and Technology Career Centre",
                 logo: "./assets/images/srm-1920w.webp",
                 contactEmail: "placementsrmtrchy@srmist.edu.in",
@@ -217,7 +216,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Set site configuration
             document.getElementById('siteLogo').src = websiteNavData.siteConfig.logo;
-            document.title = websiteNavData.siteConfig.title;
 
             // Build all sections
             buildTopBanner(websiteNavData.topBanner);

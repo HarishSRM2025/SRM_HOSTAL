@@ -138,7 +138,7 @@ body {
 
 /* Vision Mission */
 .vision-mission {
-    width: 80%;
+    width:78%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;

@@ -36,7 +36,7 @@ staff_profile.map((data,index)=>{
                     <p>${data.content}</p>
                     
                     <p><b>Email: </b> ${data.email}</p>
-                    <p><b>Phone: </b> ${data.phone}</p>
+                    <p><b>Phone: </b> ${data.mobile}</p>
                 </div>
             </div>`
     }
@@ -47,7 +47,7 @@ staff_profile.map((data,index)=>{
                     <p>${data.content}</p>
                     
                     <p><b>Email: </b> ${data.email}</p>
-                    <p><b>Phone: </b> ${data.phone}</p>
+                    <p><b>Phone: </b> ${data.mobile}</p>
                 </div>
                 <div class="welcome-image">
                     <img src="assets/images/hostel/${data.img}" alt="Dr. P. Madhusoodhanan">

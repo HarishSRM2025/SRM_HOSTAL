@@ -1,6 +1,5 @@
  const websiteData = {
             siteConfig: {
-                title: "SRM Career Centre - Global Skills for Global Placements",
                 description: "SRM Institute of Science and Technology Career Centre",
                 logo: "./assets/images/srm-1920w.webp",
                 contactEmail: "placementsrmtrchy@srmist.edu.in",
@@ -61,55 +60,7 @@
                         { label: "Hostel Rules", url: "./assets/pdf/rules.pdf",newTab:true},
                 ]
             },
-            whyChooseSRM: {
-                title: "Why Choose SRM?",
-                reasons: [
-                    { icon: "fa-check-circle", text: "Centralized placement team with dedicated coordinators", column: 1 },
-                    { icon: "fa-check-circle", text: "Strong alumni network across Fortune 500 companies", column: 1 },
-                    { icon: "fa-check-circle", text: "Proven track record of successful placements", column: 1 },
-                    { icon: "fa-check-circle", text: "Personalized mentoring and career guidance", column: 1 }
-                ]
-            },
-
-            testimonials: {
-                items: [
-                    {
-                        id: 1,
-                        name: "Kushagra Singh",
-                        degree: "B. Tech - CSE",
-                        company: "Senior consultant in Microsoft Analyst in Infilure",
-                        text: "SRM has helped me in amplify my skills in various directions. The ambient culture of SRM helped me become well of various student learns and startups which eventually helped me to become a good team player."
-                    },
-                    {
-                        id: 2,
-                        name: "Priya Sharma",
-                        degree: "B. Tech - ECE",
-                        company: "Software Engineer at Google",
-                        text: "The placement cell at SRM provided excellent training and preparation for interviews. The faculty's constant support and industry exposure through workshops helped me secure my dream job."
-                    },
-                    {
-                        id: 3,
-                        name: "Rahul Verma",
-                        degree: "MBA",
-                        company: "Business Analyst at Deloitte",
-                        text: "SRM Institute has been instrumental in shaping my career. The comprehensive curriculum, combined with practical exposure through internships and live projects, prepared me well for the corporate world."
-                    },
-                    {
-                        id: 4,
-                        name: "Anjali Reddy",
-                        degree: "B. Tech - IT",
-                        company: "Data Scientist at Amazon",
-                        text: "The technical skills and soft skills training I received at SRM were exceptional. The placement team worked tirelessly to bring top companies to campus."
-                    },
-                    {
-                        id: 5,
-                        name: "Vikram Patel",
-                        degree: "B. Tech - Mechanical",
-                        company: "Design Engineer at Tata Motors",
-                        text: "SRM's focus on practical learning and industry collaboration gave me a competitive edge. The state-of-the-art laboratories and experienced faculty helped me develop both theoretical knowledge and practical skills."
-                    }
-                ]
-            },
+           
 
             reachUs: {
                 title: "Reach Us",
@@ -250,191 +201,7 @@
         }
 
     
-        // Build Why Choose SRM
-        function buildWhyChooseSRM(data) {
-            const section = document.getElementById('whySRMSection');
-            const { title, reasons } = data;
-
-            let html = `<h2 class="section-title">${title}</h2>`;
-            html += `<div class="why-srm-grid">`;
-
-            html += `<div class="why-srm-column">`;
-            reasons.filter(r => r.column === 1).forEach(reason => {
-                html += `
-                    <div class="why-item">
-                        <i class="fas ${reason.icon}"></i>
-                        <p>${reason.text}</p>
-                    </div>
-                `;
-            });
-            html += `</div>`;
-
-            html += `<div class="why-srm-column">`;
-            reasons.filter(r => r.column === 2).forEach(reason => {
-                html += `
-                    <div class="why-item">
-                        <i class="fas ${reason.icon}"></i>
-                        <p>${reason.text}</p>
-                    </div>
-                `;
-            });
-            html += `</div>`;
-
-            html += `</div>`;
-            section.innerHTML = html;
-        }
-
-        // Build Testimonials
-        function buildTestimonials(data) {
-            const wrapper = document.getElementById('testimonialsWrapper');
-            let html = '';
-
-            data.items.forEach(testimonial => {
-                html += `
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="quote-icon">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <h3>${testimonial.name}, ${testimonial.degree}</h3>
-                            <p class="testimonial-company">${testimonial.company}</p>
-                            <p class="testimonial-text">${testimonial.text}</p>
-                        </div>
-                    </div>
-                `;
-            });
-
-            wrapper.innerHTML = html;
-            initializeTestimonialSwiper();
-        }
-
-        // Build Reach Us
-        function buildReachUs(data) {
-            const section = document.getElementById('reachUsSection');
-            const { title, address, image } = data;
-
-            let html = `<h2 class="section-title">${title}</h2>`;
-            html += `<div class="reach-us-content">`;
-            html += `
-                <div class="reach-us-image">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4646.449168462569!2d78.7559478!3d10.956244600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baafb9b231ae861%3A0xe015b4e7a6e2c2d6!2sSRM%20Institute%20of%20Science%20%26%20Technology%2C%20Tiruchirapalli%20Campus!5e1!3m2!1sen!2sin!4v1769586923391!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="reach-us-info">
-                    <h3>Address</h3>
-                    <p>
-                        ${address.line1}<br>
-                        ${address.line2}<br>
-                        ${address.line3}<br>
-                        ${address.line4}<br>
-                        ${address.email}
-                    </p>
-                </div>
-            `;
-            html += `</div>`;
-            section.innerHTML = html;
-        }
-
-        // Build Journey Section
-        function buildJourney(data) {
-            const section = document.getElementById('journeySection');
-            const { title, buttons } = data;
-
-            let html = `<h2 class="section-title">${title}</h2>`;
-            html += `<div class="journey-buttons">`;
-
-            buttons.forEach(btn => {
-                html += `<button class="journey-btn"><i class="fas ${btn.icon}"></i> ${btn.label}</button>`;
-            });
-
-            html += `</div>`;
-            section.innerHTML = html;
-        }
-
-        // Initialize Recruiter Slider
-        
-
-        // Initialize Testimonial Swiper
-        function initializeTestimonialSwiper() {
-            new Swiper('.testimonial-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-                speed: 800
-            });
-        }
-
-        // Initialize Counter Animations
-        function initializeCounterAnimations() {
-            function animateCounter(element, target, duration) {
-                const start = 0;
-                const numericTarget = parseFloat(target.replace('+', ''));
-                const hasPlus = target.includes('+');
-                const increment = numericTarget / (duration / 16);
-                let current = start;
-
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= numericTarget) {
-                        element.textContent = hasPlus ? `${Math.floor(numericTarget)}+` : Math.floor(numericTarget);
-                        clearInterval(timer);
-                    } else {
-                        element.textContent = Math.floor(current);
-                    }
-                }, 16);
-            }
-
-            const statsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-                        const number = entry.target.querySelector('.stats-count');
-                        if (number) {
-                            const targetValue = number.getAttribute('data-target');
-                            animateCounter(number, targetValue, 2000);
-                            entry.target.classList.add('animated');
-                        }
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            document.querySelectorAll('.stats-card').forEach(stat => {
-                statsObserver.observe(stat);
-            });
-        }
-
-        // Initialize Scroll Animations
-        function initializeScrollAnimations() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(30px)';
-                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(section);
-            });
-        }
+       
 
         // Initialize Mobile Menu
         function initializeMobileMenu() {
@@ -459,29 +226,7 @@
             }
         }
 
-        // Initialize Additional Features
-        function initializeAdditionalFeatures() {
-            // Smooth scroll
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                });
-            });
-
-            // Navbar scroll effect
-            const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 100) {
-                    navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
-                } else {
-                    navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-                }
-            });
-        }
+       
 
         // ============================================
         // MAIN INITIALIZATION
@@ -489,23 +234,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Set site configuration
             document.getElementById('siteLogo').src = websiteData.siteConfig.logo;
-            document.title = websiteData.siteConfig.title;
 
             // Build all sections
             buildTopBanner(websiteData.topBanner);
             buildNavigation(websiteData.navigation);
             buildGateway(websiteData.gateway);
             buildDirectorMessage(websiteData.directorMessage);
-            buildWhyChooseSRM(websiteData.whyChooseSRM);
-            buildTestimonials(websiteData.testimonials);
-            buildReachUs(websiteData.reachUs);
-            buildJourney(websiteData.journey);
 
             // Initialize features
             initializeMobileMenu();
-            initializeScrollAnimations();
-            initializeCounterAnimations();
-            initializeAdditionalFeatures();
 
             console.log('SRM Career Centre - Website loaded successfully!');
         });
