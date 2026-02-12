@@ -22,7 +22,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
-    background-color: var(--light-blue);
 }
 
 
@@ -172,7 +171,7 @@ body {
 .vm-card p {
     color: var(--text-light);
     margin-bottom: 12px;
-    height: 150px;
+    max-height: 150px;
     overflow-y: auto;
     line-height: 1.6;
     padding-right: 10px;
@@ -244,60 +243,8 @@ body {
     font-size: 1.1rem;
 }
 
-/* Welcome Section */
-.welcome-section {
-    background: var(--primary-blue);
-    color: var(--white);
-    padding: 50px 60px;
-    border-radius: 0;
-    margin: 0;
-}
 
-.welcome-content {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 60px;
-   width: 70%;
-    margin: 0 auto;
-}
 
-.welcome-image {
-    text-align: center;
-}
-
-.welcome-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 6px solid var(--white);
-    background: var(--white);
-}
-
-.welcome-image h4 {
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--white);
-}
-
-.designation {
-    font-size: 0.88rem;
-    opacity: 0.95;
-    line-height: 1.5;
-    color: var(--white);
-}
-
-.welcome-text h2 {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    font-weight: 600;
-}
-
-.welcome-text p {
-    opacity: 0.98;
-    font-size: 0.8rem;
-    text-align: justify;
-}
 
 /* Faculty Section */
 .faculty-section {
@@ -342,7 +289,7 @@ body {
 
     .vision-mission {
         grid-template-columns: 1fr;
-        margin: 5%  auto;
+        margin: 5%  10px;
     }
 
     .welcome-content {
@@ -959,3 +906,106 @@ body {
                 padding: 30px 40px;
             }
         }
+
+
+        /* ===== Welcome Section ===== */
+.welcome-section {
+  width: 100%;
+  padding: 60px 8%;
+}
+
+/* ===== Content Wrapper ===== */
+.welcome-content {
+  display: flex;
+  align-items: center;
+  gap:0px;
+  margin-bottom: 60px;
+}
+
+/* ===== Text Content ===== */
+.welcome-text {
+  flex: 1;
+  background-color: #ecf6ff;
+  padding:60px;
+}
+
+.welcome-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.welcome-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+.welcome-text b {
+  color: #111827;
+}
+.welcome-content:nth-child(even) .welcome-image img{
+    left:-40px;
+}
+/* ===== Image Section ===== */
+.welcome-image {
+  text-align: center;
+}
+
+.welcome-image img {
+  width: 100%;
+  max-width: 420px;
+  position:relative;
+  z-index:100;
+  left:30px;
+  object-fit: cover;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 992px) {
+  .welcome-section {
+    padding: 50px 5%;
+  }
+
+  .welcome-content {
+    gap: 30px;
+  }
+
+  .welcome-text h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-image img {
+    max-width: 100%;
+  }
+
+  .welcome-text p {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section {
+    padding: 40px 4%;
+  }
+
+  .welcome-text h2 {
+    font-size: 22px;
+  }
+
+  .welcome-text p {
+    font-size: 14px;
+  }
+}
+.text-left{
+    text-align:right;
+}

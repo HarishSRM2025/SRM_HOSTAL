@@ -38,38 +38,27 @@
             },
 
             gateway: {
-                title: "Welcome to Our Career & Placement Centre",
+                title: "All about Student accommodation & facilities",
                 description: [
-                    "Your future begins here. Our Placement Cell is dedicated to guiding students from classrooms to careers, connecting talent with opportunities, and shaping leaders for tomorrow. With strong industry partnerships and personalized training, we ensure every student is prepared to step confidently into the professional world."
+                    "We, at SRM Institute of Science and Technology (formerly known as SRM University), provide a wide choice in selecting the type or rooms in a hostel to suit every budget, with an aim of providing a decent stay and the best possible learning environment.<br>The quality of life is one of the most important factors considered by the students deciding to stay in the College/University hostels. By quality, it is not just the rooms but also the overall environment of the University campus. Ours is one of the greenest Campuses’ in the country with all the facilities that are expected from global Universities. The stay at our campus provides a wealth of experience by developing qualities such as camaraderie and social responsibility. Our students comprise a cosmopolitan mix from all parts of India as well as many countries across the globe. <br>The students staying at SRM hostels are provided with healthy and sumptuous food options at highly subsidized rates. They can choose to have North Indian or South Indian menu in the dining halls that are co-located. For the benefit of our international students, the hostels also offer a multi-cuisine dining facility providing Thai, Chinese and continental food.<br>Life on campus helps the students not only to study but also to socialize with the peers. Friendships formed on the campus last a lifetime. SRM provides a comfortable and safe housing to all its students. The students housed in the campus are encouraged to use the gymnasium, playground, and all indoor gaming facilities."
                 ],
-                stats: [
-                    { icon: "fa-briefcase", count: "144+", label: "Number of Roles" ,suffix:""},
-                    { icon: "fa-file-alt", count: "10190+", label: "Offers" ,suffix:""},
-                    { icon: "fa-award", count: "211+", label: "High Paying Offers" ,suffix:""},
-                    { icon: "fa-trophy", count: "65", label: "Highest CTC" ,suffix:" LPA"},
-                    { icon: "fa-chart-line", count: "6.5", label: "Average CTC" ,suffix:".5 LPA"}
-                ]
+                
             },
 
             directorMessage: {
-                title: "Dean's Message",
+                title: "Director's Message",
                 director: {
-                    name: "T. Madhavan",
-                    position: "Dean Placement,SRM IST ",
-                    image: "./assets/images/teams/1.jpeg",
-                    phone: "<a href='tel:9842916830' style='color:white!important'>9842916830</a> / <a href='tel:8489903631' style='color:white!important'>8489903631</a>"
+                    name: "Name",
+                    position: "Designation",
+                    image: "https://static.vecteezy.com/system/resources/thumbnails/032/176/191/small/business-avatar-profile-black-icon-man-of-user-symbol-in-trendy-flat-style-isolated-on-male-profile-people-diverse-face-for-social-network-or-web-vector.jpg",
+                    phone: "9876543210"
                 },
                 message: [
-                    "At our institution, we believe placements are not just about jobs — they are about building careers. Our focus is on nurturing skills, confidence, and professionalism so that students excel in competitive environments. Together with faculty, alumni, and recruiters, we create a supportive ecosystem for success."
+                    "As per our Founder Chancellor’s wish, the mission of our directorate  is to provide a safe, supportive, and comfortable living environment that fosters academic success and personal growth of every SRMISTian.<br>We encourage you to take care of the hostel facilities and report any concerns or needs for improvements.  Should you have any personal, academic, or social concerns, our hostel staff, including Wardens and support personnel, are always available to assist.<br>We also encourage students to participate in the various cultural, recreational, and educational activities hosted by the Directorate throughout the year.<br>“A hostel is not a place: It is a state of mind- open, adventurous and full of possibilities”"
                 ],
                 quickLinks: [
-                        { label: "Catapulting Careers", url: "./catapulting-careers.html" },
-                        { label: "Activities", url: "./activities.html" },
-                        { label: "Placement Statistics", url: "./placement_stats.html" },
-                        { label: "Industrial Collaborations", url: "./mou.html" },
-                        { label: "Career Development Centre", url: "./cdc.html" },
-                        { label: "Meet Our Staff", url: "./staff.html" },
-                        { label: "Contact", url: "./contact.html" }
+                        { label: "Meet Our Staff", url: "./staff.html", newTab:false},
+                        { label: "Hostel Rules", url: "./assets/pdf/rules.pdf",newTab:true},
                 ]
             },
             whyChooseSRM: {
@@ -220,26 +209,7 @@
             data.description.forEach(para => {
                 html += `<p>${para}</p>`;
             });
-
-            html += `</div><div class="stats-grid">`;
-            
-            
-
-            data.stats.forEach(stat => {
-                html += `
-                    <div class="stats-card">
-                        <div class="stats-icon">
-                            <i class="fas ${stat.icon}"></i>    
-                        </div>
-                        <div class="stats-content">
-                            <h3><span class="stats-count" data-target="${stat.count}">${stat.count}</span><span class="lpa">${stat.suffix}</span></h3>
-                            <p class="stats-label">${stat.label}</p>    
-                        </div>
-                    </div>
-                `;
-            });
-
-            html += `</div>`;
+            html +="</div>"
             section.innerHTML = html;
         }
 
@@ -267,7 +237,12 @@
             html += `</div></div>`;
             html += `<div class="director-links">`;
             quickLinks.forEach(link => {
-                html += `<a href="${link.url}"><i class="fas fa-arrow-right"></i> ${link.label}</a>`;
+                if(link.newTab){
+                    html += `<a href="${link.url}" target='_blank'><i class="fas fa-arrow-right"></i> ${link.label}</a>`;
+                }
+                else{
+                    html += `<a href="${link.url}"><i class="fas fa-arrow-right"></i> ${link.label}</a>`;
+                }
             });
 
             html += `</div></div>`;

@@ -66,7 +66,20 @@
                     { label: "About us", url: "#", hasDropdown: false },
                     { label: "Academics", url: "#", hasDropdown: true },
                     { label: "Research", url: "#", hasDropdown: false },
-                    { label: "Campus Life", url: "#", hasDropdown: false },
+                    {
+                        label: "Campus Life",
+                        hasDropdown: true,
+                        dropdown: [
+                            { label: "Accommodation", url: "index.html" },  
+                            { label: "Girls Hostel", url: "girls_hostel.html" },
+                            { label: "Boys Hostel", url: "boys_hostel.html" },
+                            { label: "International Hostel", url: "international_hostel.html" },
+                            { label: "How to Apply", url: "#" },
+                            { label: "Dining & Eateries", url: "#" },
+                            { label: "Safety & Security", url: "#" },
+                            { label: "Contact us", url: "#" }
+                        ]
+                    },
                     { label: "News & Events", url: "#", hasDropdown: false },
                     { label: "Placement", url: "index.html", hasDropdown: false },
                     { label: "Apply Now", url: "#", hasDropdown: false }
@@ -105,12 +118,26 @@
             // Desktop Navigation
             let navHtml = '';
             data.mainNav.forEach(item => {
-                if (item.hasDropdown) {
+
+                if (item.hasDropdown && item.dropdown) {
+
                     navHtml += `
                         <div class="nav-dropdown">
-                            <a href="${item.url}" class="nav-link">${item.label} <i class="fas fa-chevron-down"></i></a>
+                            <a href="${item.url || '#'}" class="nav-link">
+                                ${item.label} <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                    `;
+
+                    item.dropdown.forEach(sub => {
+                        navHtml += `<a href="${sub.url}" class="dropdown-link">${sub.label}</a>`;
+                    });
+
+                    navHtml += `
+                            </div>
                         </div>
                     `;
+
                 } else {
                     navHtml += `<a href="${item.url}" class="nav-link">${item.label}</a>`;
                 }
