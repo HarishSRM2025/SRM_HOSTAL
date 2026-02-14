@@ -1,0 +1,136 @@
+/* ===============================
+   COMMON SECTION STYLES
+================================ */
+.section-title2,.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #222;
+}
+.section-title2{
+    color:white;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ===============================
+   HOSTEL FACILITIES
+================================ */
+.hostel-facilities {
+    padding: 80px 0;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.facility-card {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px #00000014;
+    transition: 0.3s ease;
+}
+
+.facility-card i {
+    font-size: 40px;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.facility-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===============================
+   HOSTEL RULES
+================================ */
+.hostel-rules {
+    padding: 70px 0;
+}
+
+.rules-list {
+    max-width: 800px;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.rules-list li {
+    background: #f1f1f1;
+    padding:0px;
+    height: 70px;
+    display:flex;
+    align-items:center;
+    margin-bottom: 20px;
+    border-left:6px solid var(--accent-gold);
+    font-size: 16px;
+    box-shadow:0px 0px 10px #dfdfdf;
+    transition:.5s;
+}
+.rules-list li span{
+    display:block;
+    padding-right:20px;
+    padding-left:20px;
+    font-size:40px;
+    font-weight:700;
+    color:#b1b1b1;
+}
+.rules-list li:hover{
+    transform:translate(-5px);
+    background:white;
+}
+/* ===============================
+   HOW TO APPLY
+================================ */
+.hostel-apply {
+    padding: 80px 0;
+}
+
+.apply-steps {
+    max-width: 700px;
+    margin: auto;
+    font-size: 17px;
+}
+
+.apply-steps li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+/* ===============================
+   HOSTEL CONTACT
+================================ */
+.hostel-contact {
+    padding: 70px 0;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 18px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 26px;
+    }
+}

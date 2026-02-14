@@ -17,9 +17,7 @@
     background:var(--light-blue);
     padding:3% 5%;
 }
-.grayBg{
-    background:var(--light-blue);
-}
+
 .breadcrum-hero::before {
     content: '';
     position: absolute;

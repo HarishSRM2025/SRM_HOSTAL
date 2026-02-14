@@ -2,23 +2,15 @@ const welcome_section=document.getElementById("welcome_section");
 
 let staff_profile=[
     {
-        hostel_name:"Hostel Name",
-        img:"1.png",
-        content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia corrupti ducimus odio? Facere corporis exercitationem quaerat? Veritatis aliquid in voluptates nobis expedita hic sapiente, adipisci provident aliquam officia iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, provident consequatur maiores delectus atque eligendi ad magnam explicabo, labore quasi asperiores ut quis, quas nam esse pariatur harum fugiat. Doloremque?Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        hostel_name:"S Block – Phase 2",
+        img:"3.JPG",
+        content:"S Block Phase 2 is dedicated to international students and offers well-planned accommodation with attached bathroom facilities. The hostel provides two-sharing and four-sharing rooms in both air-conditioned and non-air-conditioned options, ensuring a comfortable stay for international residents.",
         mobile:"9876543210",
         email:"name@gmail.com"
-    },
-    {
-        hostel_name:"Hostel Name",
-        img:"2.jpg",
-        content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia corrupti ducimus odio? Facere corporis exercitationem quaerat? Veritatis aliquid in voluptates nobis expedita hic sapiente, adipisci provident aliquam officia iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, provident consequatur maiores delectus atque eligendi ad magnam explicabo, labore quasi asperiores ut quis, quas nam esse pariatur harum fugiat. Doloremque?Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        mobile:"9876543210",
-        email:"name@gmail.com"
-    },
-    {
-        hostel_name:"Hostel Name",
-        img:"3.jpg",
-        content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia corrupti ducimus odio? Facere corporis exercitationem quaerat? Veritatis aliquid in voluptates nobis expedita hic sapiente, adipisci provident aliquam officia iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, provident consequatur maiores delectus atque eligendi ad magnam explicabo, labore quasi asperiores ut quis, quas nam esse pariatur harum fugiat. Doloremque?Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },{
+        hostel_name:"G Block – Phase 2",
+        img:"3.JPG",
+        content:"G Block Phase 2 is designated for international students and offers two-sharing and four-sharing rooms in AC and Non-AC configurations. All rooms include attached bathroom facilities, providing a comfortable and secure stay.",
         mobile:"9876543210",
         email:"name@gmail.com"
     }
@@ -29,7 +21,7 @@ staff_profile.map((data,index)=>{
     if(index%2===0){
          welcome_section.innerHTML+=`<div class="welcome-content">
                 <div class="welcome-image">
-                    <img src="assets/images/hostel/${data.img}" alt="Dr. P. Madhusoodhanan">
+                    <img src="assets/images/hostel/international/${data.img}" alt="Dr. P. Madhusoodhanan">
                 </div>
                 <div class="welcome-text">
                     <h2>${data.hostel_name}</h2>
@@ -50,7 +42,7 @@ staff_profile.map((data,index)=>{
                     <p><b>Phone: </b> ${data.mobile}</p>
                 </div>
                 <div class="welcome-image">
-                    <img src="assets/images/hostel/${data.img}" alt="Dr. P. Madhusoodhanan">
+                    <img src="assets/images/hostel/international/${data.img}" alt="Dr. P. Madhusoodhanan">
                 </div>
             </div>`
     }

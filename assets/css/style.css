@@ -97,7 +97,7 @@ body {
 }
 
 /* Section Title */
-.section-title {
+.section-title,.section-title2 {
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -107,7 +107,7 @@ body {
     padding-bottom: 15px;
 }
 
-.section-title::after {
+.section-title::after,.section-title2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -246,7 +246,7 @@ body {
 }
 .director-text{
     overflow: auto;
-    height: 300px;
+    height: 230px;
     padding-right: 10%;
 }
 .director-text::-webkit-scrollbar{
@@ -1140,19 +1140,18 @@ body {
 
     .hostel-card {
         background: var(--white);
-        border-radius:8px;
         overflow:hidden;
         padding: 0px;
         text-align: center;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 25px #00000014;
         transition: all 0.3s ease;
         border-bottom:6px solid transparent;
     }
 
     .hostel-card:hover {
         transform: translateY(-8px);
-        border-color: var(--primary-blue);
-        box-shadow: 0 15px 40px rgba(0, 82, 163, 0.25);
+        border-color: var(--accent-gold);
+        box-shadow: 0 15px 40px #31313140;
     }
 
     .hostel-card img {
@@ -1226,7 +1225,7 @@ body {
         display:flex;
         flex-direction: column;
         gap:10px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 25px #00000014;
         transition: all 0.3s ease;
         border: 2px solid transparent;
      }
@@ -1237,3 +1236,16 @@ body {
         max-width: 2000px;
         margin: 0 auto;
     }
+
+    .grayBg2{
+        background:url(../images/bg.png),linear-gradient(135deg,#002d70,#00285c);
+        background-size:cover;
+        background-attachment:fixed;
+    }
+
+    .grayBg{
+        background:url(../images/bg.png),linear-gradient(135deg,#00428d33,#00428d33);
+        background-size:cover;
+        background-attachment:fixed;
+    }
+  
